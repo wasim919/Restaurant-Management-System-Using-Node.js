@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<link href = "/assets/styles.css" rel = "stylesheet" type = "text/css">
+	<style>
+	.b{
+	  font-family: "Roboto", sans-serif;
+	  text-transform: lowercase;
+	  outline: 0;
+	  width: 100%;
+	  border: 0;
+	  padding: 15px;
+    background-color: #76b852;
+	  color: #FFFFFF;
+	  font-size: 14px;
+	  -webkit-transition: all 0.3 ease;
+	  transition: all 0.3 ease;
+	  cursor: pointer;
+}
+.b:hover,.form button:active,.form button:focus {
+  background: #43A047;
+	}
+</style>
+</head> 
+<body>
+	<div class="orderPage">
+		<h2><center>The Kitchen: Order</center></h2>
+	</div>
+	<div class="head">
+	<h2>Welcome <%=name%> to the Order Page</h2>
+</div>
+<div class="head1">
+	<p><strong>What do U wish to order</strong></p>
+	</div>
+	<form action = "/order/<%=customerId%>/<%=name%>"  method="post" >
+			<div class="food">
+			<img src='../images/chilliChicken.jpg' width='30%' height='30%'/><br>			
+		<button type="button" class="b">Chilli Chicken:
+		<select name="chilliChicken">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  	</div><br><br><br>
+  	<div class="food">
+  		<img src='../images/chickenBiryani.jpg' width='41%' height='30%'/><br>
+  		<button type="button" class="b">Chicken Biryani:
+  		<select name="chickenBiryani">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		<div class="food">
+  		<img src='../images/butterChicken.jpeg' width='50%' height='30%'/><br>
+  		<button type="button" class="b">Butter Chicken:
+  		<select name="butterChicken">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		<div class="food">
+  		<img src='../images/butterPaneer.jpg' width='25.5%' height='30%'/><br>
+  		<button type="button" class="b">Butter Paneer:
+  		<select name="butterPaneer">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		<div class="food">
+  		<img src='../images/chickenTikka.jpg' width='25.5%' height='30%'/><br>
+  		<button type="button" class="b">Chicken Tikka:
+  		<select name="chickenTikka">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  	</div>
+  		<div class="food">
+  		<img src='../images/eggBhurji.jpg' width='25.5%' height='30%'/><br>
+  		<button type="button" class="b">Egg Bhurji:
+  		<select name="eggBhurji">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		</div>
+  		<div class="food">
+  		<img src='../images/chilliPaneer.jpg' width='25.5%' height='30%'/><br>
+  		<button type="button" class="b">Chilli Paneer:
+  		<select name="chilliPaneer">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		<div class="food" class="b">
+  		<img src='../images/kadaiPaneer.jpg' width='61%' height='30%'/><br>
+  		<button type="button" class="b">Kadai Paneer:
+  		<select name="kadaiPaneer">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		<div class="food" class="b">
+  		<img src='../images/vegBiryani.jpg' width='30%' height='30%'/><br>
+  		<button type="button">Veg Biryani:
+  		<select name="vegBiryani">
+			<option value="0">0</option>
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+  		</select>
+  	</button>
+  		</div>
+  		<button class="b" type="submit">Order</button>
+	</form>
+	</body>
+</html>

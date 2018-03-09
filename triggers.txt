@@ -1,0 +1,5 @@
+ 
+
+CREATE TRIGGER tr_delete BEFORE DELETE ON custorder FOR EACH ROW                                                                                                        -> BEGIN                                                                                                               -> DELETE FROM bill WHERE customerId = (SELECT customerId FROM custorder);                                             -> END$$
+
+CREATE TRIGGER tr_insert AFTER INSERT ON custorder                                                  -> FOR EACH ROW                                                                                                        -> BEGIN                                                                                                               -> INSERT INTO bill(totalAmount, leftDateTime, customerId) VALUES (NEW.totalAmount, CURRENT_TIMESTAMP, NEW.customerId);                                                                                                                       -> END$$

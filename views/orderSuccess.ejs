@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href = "/assets/styles.css" rel = "stylesheet" type = "text/css">
+	<style>
+	.b{
+	  font-family: "Roboto", sans-serif;
+	  text-transform: capitalize;
+	  outline: 0;
+	  background: #4CAF50;
+	  width: 100%;
+	  border: 0;
+	  padding: 15px;
+	  color: #FFFFFF;
+	  font-size: 14px;
+	  vertical-align: bottom;
+	  -webkit-transition: all 0.3 ease;
+	  transition: all 0.3 ease;
+	  cursor: pointer;
+	  
+	  margin-top:55%;
+}
+.b:hover,.form button:active,.form button:focus {
+  background: #43A047;
+	}
+.c{
+	  font-family: "Roboto", sans-serif;
+	  text-transform: capitalize;
+	  outline: 0;
+	  background: #4CAF50;
+	  width: 100%;
+	  border: 0;
+	  padding: 15px;
+	  color: #FFFFFF;
+	  font-size: 14px;
+	  vertical-align: top;
+	  -webkit-transition: all 0.3 ease;
+	  transition: all 0.3 ease;
+	  cursor: pointer;
+	  
+	  margin-top: 1%;
+}
+.c:hover,.form button:active,.form button:focus {
+  background: #43A047;
+	}
+</style>
+</head>
+<body>
+	<div class="parent">
+	<div class="name"><h2>The Kitchen Restaurant: Bill</h2></div>
+	<div class="grat">
+		<%=customerName%> Your order was successfull. Just wait for a few minutes.
+	</div>
+	<div class="chef">
+  	Your order is being Prepared by:
+  	<ul>
+  		<% Object.keys(joinResult).forEach(function(key){%>
+ 			<li> Your order <%=key%> will be prepared by <%= joinResult[key] %> </li> 
+		<%});%>
+  	</ul>
+</div>
+<div class="waiter">
+	The waiter staff in our restaurant include:
+	<ul>
+	<%waiter.forEach(function(element){%>
+	<li><%=element.waiterName%></li>
+	<%});%>
+	</ul>
+	</div>
+	<div class="bill">
+		The total amount You need to pay is: <%=totalAmount%>
+	</div>
+</div>
+<form action = "/reorder/<%=customerId%>/<%=customerName%>/<%=orderNo%>" method="post" >
+	<button class="b" type="submit">Re-Order</button>
+</form>
+<form action = "/pay/<%=customerId%>/<%=customerName%>" method="post" >
+	<button class="c" type="submit">Pay</button>
+</form>	
+	</body>
+</html>

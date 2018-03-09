@@ -1,0 +1,19 @@
+{
+  "name": "dbmsproject",
+  "version": "1.0.0",
+  "description": "Restaurant Management System",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wasim Ishaq Khan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "delay": "^2.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "promise-mysql": "^3.2.0"
+  }
+}
